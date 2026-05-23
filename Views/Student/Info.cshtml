@@ -1,0 +1,18 @@
+﻿@model string
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Thông tin sinh viên</title>
+</head>
+<body>
+    <h2>Thông tin sinh viên</h2>
+
+    <ul>
+        <li><b>Tên:</b> @ViewBag.Name</li>
+        <li><b>Tuổi:</b> @ViewData["Age"]</li>
+        <li><b>Ngành học:</b> @Model</li>
+    </ul>
+</body>
+</html>
