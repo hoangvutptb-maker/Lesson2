@@ -1,0 +1,16 @@
+﻿@model Lesson2.Models.Book
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chi tiết sách</title>
+</head>
+<body>
+    <h2>Chi tiết sách</h2>
+    <p><b>Mã sách (Id):</b> @Model.Id</p>
+    <p><b>Tên sách:</b> @Model.Name</p>
+    <p><b>Giá bán:</b> @Model.Price $</p>
+    <br />
+    <a href="/Book/Index"><- Quay lại danh sách</a>
+</body>
+</html>
