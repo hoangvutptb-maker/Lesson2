@@ -1,3 +1,5 @@
+﻿using Lesson2.Middlewares;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -20,10 +22,13 @@ app.UseAuthorization();
 
 app.MapStaticAssets();
 
+// Đăng ký RequestLoggingMiddleware vào Pipeline
+// Lưu ý: Phải đặt sau Routing/Authorization và trước ControllerRoute
+app.UseMiddleware<RequestLoggingMiddleware>();
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
-
 
 app.Run();
